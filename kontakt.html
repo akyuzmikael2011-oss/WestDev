@@ -41,6 +41,7 @@
     h1{ font-size:2.5rem; letter-spacing:-0.05em; margin-bottom:10px; text-align:center; }
     .gradient-text{ background:linear-gradient(135deg,var(--accent),var(--accent-dark)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     .subtitle{ text-align:center; color:var(--text-secondary); margin-bottom:35px; line-height:1.6; }
+    
     form{ display:flex; flex-direction:column; gap:20px; }
     .form-group{ display:flex; flex-direction:column; gap:8px; }
     label{ font-weight:700; font-size:0.9rem; color:var(--text-secondary); padding-left:5px; }
@@ -48,7 +49,6 @@
       background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
       padding: 15px; border-radius:15px; color: white; font-family: inherit; font-size: 1rem;
     }
-    select option { background: #08192d; color: white; }
     .submit-btn{
       background: linear-gradient(135deg,var(--accent),var(--accent-dark));
       color: white; border: none; padding: 18px; border-radius: 18px;
@@ -69,43 +69,32 @@
   <main class="page">
     <div class="contact-card">
       <h1>Projekt <span class="gradient-text">starten</span></h1>
-      <p class="subtitle">Wählen Sie Ihr Paket. Ich melde mich innerhalb von 24h!</p>
+      <p class="subtitle">Schicke mir deine Anfrage. Ich melde mich bei dir!</p>
 
       <form action="https://formspree.io/f/xzdooolj" method="POST">
+        
         <div class="form-group">
-          <label>Name / Unternehmen</label>
-          <input type="text" name="name" required>
+          <label>Deine E-Mail Adresse:</label>
+          <input type="email" name="email" required placeholder="ihre@mail.de">
         </div>
-        <div class="form-group">
-          <label>E-Mail Adresse</label>
-          <input type="email" name="_replyto" required>
-        </div>
+
         <div class="form-group">
           <label>Welches Paket?</label>
-          <select name="paket" required>
-            <option value="Normal-300">Normal Paket (300€)</option>
-            <option value="Plus-500">Plus Paket (500€)</option>
-            <option value="Premium-740">Premium Paket (740€)</option>
+          <select name="paket">
+            <option value="Normal">Normal Paket (300€)</option>
+            <option value="Plus">Plus Paket (500€)</option>
+            <option value="Premium">Premium Paket (740€)</option>
           </select>
         </div>
+
         <div class="form-group">
-          <label>Zusatz-Optionen</label>
-          <select name="extras">
-            <option value="Keine">Keine Extras</option>
-            <option value="Lieferdienst">Lieferdienst Link (+30€)</option>
-            <option value="Maps">Maps Integration (+50€)</option>
-            <option value="Seite">Zusatz-Seite (+40€)</option>
-          </select>
+          <label>Deine Nachricht:</label>
+          <textarea name="message" rows="4" required placeholder="Was kann ich für dich tun?"></textarea>
         </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea name="message" rows="4" required></textarea>
-        </div>
-        
-        <input type="text" name="_gotcha" style="display:none">
-        
-        <button type="submit" class="submit-btn">Anfrage absenden</button>
+
+        <button type="submit" class="submit-btn">Absenden</button>
       </form>
+
     </div>
   </main>
 </body>
