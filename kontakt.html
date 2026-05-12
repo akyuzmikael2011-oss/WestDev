@@ -73,7 +73,6 @@
     .gradient-text{ background:linear-gradient(135deg,var(--accent),var(--accent-dark)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
     .subtitle{ text-align:center; color:var(--text-secondary); margin-bottom:35px; line-height:1.6; }
 
-    /* Formular Styles */
     form{ display:flex; flex-direction:column; gap:20px; }
     
     .form-group{ display:flex; flex-direction:column; gap:8px; }
@@ -87,7 +86,17 @@
       transition: 0.3s;
     }
 
-    input:focus, textarea:focus {
+    /* Styling für das Dropdown-Menü */
+    select {
+      cursor: pointer;
+      appearance: none; /* Entfernt Standard-Pfeil */
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 15px center;
+      background-size: 15px;
+    }
+
+    input:focus, textarea:focus, select:focus {
       outline: none; border-color: var(--accent); background: rgba(255,255,255,0.1);
     }
 
@@ -124,13 +133,13 @@
   <main class="page">
     <div class="contact-card">
       <h1>Projekt <span class="gradient-text">starten</span></h1>
-      <p class="subtitle">Schicken Sie mir eine Nachricht. Ich melde mich innerhalb von 24h bei Ihnen!</p>
+      <p class="subtitle">Wählen Sie Ihr Paket aus. Ich melde mich innerhalb von 24h!</p>
 
-      <form action="https://formspree.io/f/xzdooolj" method="POST">
+      <form action="https://formspree.io/f/DEINE_FORM_ID" method="POST">
         
         <div class="form-group">
           <label>Name / Unternehmen</label>
-          <input type="text" name="name" placeholder="z.B. Lana's Blumen" required>
+          <input type="text" name="name" placeholder="Ihr Name" required>
         </div>
 
         <div class="form-group">
@@ -139,18 +148,29 @@
         </div>
 
         <div class="form-group">
-          <label>Welches Paket interessiert Sie?</label>
-          <select name="paket">
-            <option value="normal">Normal Paket (300€)</option>
-            <option value="plus">Plus Paket (500€)</option>
-            <option value="premium">Premium Paket (740€)</option>
-            <option value="andere">Individuelle Anfrage</option>
+          <label>Welches Paket möchten Sie?</label>
+          <select name="paket" required>
+            <option value="" disabled selected>Bitte wählen...</option>
+            <option value="Normal-300">Normal Paket (300€)</option>
+            <option value="Plus-500">Plus Paket (500€)</option>
+            <option value="Premium-740">Premium Paket (740€)</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Zusatz-Wünsche (z.B. Maps, Lieferando-Link)</label>
-          <textarea name="message" rows="4" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
+          <label>Zusatz-Optionen (optional)</label>
+          <select name="extras">
+            <option value="keine">Keine Extras</option>
+            <option value="Lieferdienst">Lieferdienst Link (+30€)</option>
+            <option value="Maps">Maps Integration (+50€)</option>
+            <option value="Seite">Zusätzliche Seite (+40€)</option>
+            <option value="Mix">Mehrere Extras (bitte unten schreiben)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Nachricht / Details zum Projekt</label>
+          <textarea name="message" rows="4" placeholder="Erzählen Sie mir kurz, was Sie brauchen..."></textarea>
         </div>
 
         <button type="submit" class="submit-btn">Anfrage absenden</button>
