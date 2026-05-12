@@ -187,6 +187,8 @@
       box-shadow:0 18px 45px var(--shadow);
       overflow:hidden;
       transition:0.3s ease;
+      display: flex;
+      flex-direction: column;
     }
 
     .pricing-card:hover{
@@ -231,6 +233,7 @@
       flex-direction:column;
       gap:14px;
       margin-bottom:30px;
+      flex-grow: 1;
     }
 
     .features li{
@@ -259,7 +262,11 @@
       transition:0.25s ease;
     }
 
-    /* NEU: Styles für die Zusatz-Optionen */
+    .cta:hover {
+      transform: scale(1.02);
+      box-shadow: 0 15px 30px rgba(0,119,255,0.4);
+    }
+
     .addons-section{
       background:var(--glass);
       border:1px solid var(--glass-border);
@@ -382,7 +389,7 @@
     <section class="addons-section">
       <h3 class="addons-title">Zusatz-Optionen (Add-ons)</h3>
       <p style="text-align:center; color:var(--text-secondary); margin-bottom:30px;">
-        Stellen Sie sich Ihr Paket individuell zusammen.
+        Stellen Sie sich Ihr Paket individuell zusammen. Alle Extras können im Kontaktformular angegeben werden.
       </p>
       <div class="addons-grid">
         <div class="addon-item">
@@ -400,6 +407,9 @@
           <p>Für Galerie, Team oder Menü</p>
           <div class="addon-price">+ 40€</div>
         </div>
+      </div>
+      <div style="text-align: center; margin-top: 30px;">
+          <a href="kontakt.html" class="cta" style="display: inline-block;">Individuelles Paket anfragen</a>
       </div>
     </section>
 
