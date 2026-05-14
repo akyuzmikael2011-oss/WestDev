@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Impressum | WestDev Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #f3f8ff; --text-primary: #07111f; --text-secondary: #45607e;
+      --glass: rgba(255, 255, 255, 0.35); --glass-border: rgba(255, 255, 255, 0.5);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg-primary: #07111f; --text-primary: #f2f7ff; --text-secondary: #8fa8c4; --glass: rgba(10, 20, 35, 0.45); --glass-border: rgba(255, 255, 255, 0.08); }
+    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); padding: 100px 20px; line-height: 1.6; }
+    .container { max-width: 800px; margin: auto; background: var(--glass); backdrop-filter: blur(20px); padding: 40px; border-radius: 24px; border: 1px solid var(--glass-border); }
+    h1 { margin-bottom: 20px; }
+    h2 { margin-top: 30px; margin-bottom: 10px; font-size: 1.2rem; }
+    a { color: #4db1ff; text-decoration: none; }
+    .back-link { display: inline-block; margin-bottom: 20px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    <h1>Impressum</h1>
 
+    <h2>Angaben gemäß § 5 TMG</h2>
+    <p>
+      Mikael Akyüz<br>
+      WestDev Solutions<br>
+      Dortmunder Straße 136A<br>
+      45665 Recklinghausen<br>
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: [DEINE YAHOO ODER GMAIL ADRESSE]<br>
+      Telefon: [OPTIONAL DEINE NUMMER]
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p>
+      Mikael Akyüz<br>
+      Dortmunder Straße 136A<br>
+      45665 Recklinghausen
+    </p>
+
+    <h2>Streitschlichtung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank">https://ec.europa.eu/consumers/odr</a>.</p>
+    <p>Ich bin nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  </div>
+</body>
+</html>
