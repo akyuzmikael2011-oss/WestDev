@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muster Restaurant | Webdesign Recklinghausen</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --gold: #c5a059;
+            --dark: #121212;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif, Arial;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 90%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        /* Menu Section */
+        .menu-container {
+            padding: 80px 10%;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .menu-category h3 {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .item-name {
+            font-weight: bold;
+        }
+
+        .price {
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #000;
+            color: #777;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            header { flex-direction: column; }
+            nav { margin-top: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Restaurant Name</div>
+        <nav>
+            <a href="#menu">Speisekarte</a>
+            <a href="#contact">Kontakt</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Kulinarik in Recklinghausen</h1>
+        <p>Tradition trifft auf Moderne</p>
+    </section>
+
+    <section id="menu" class="menu-container">
+        <div class="section-title">
+            <h2>Unsere Speisekarte</h2>
+            <p>Frisch zubereitete Spezialitäten für jeden Geschmack</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-category">
+                <h3>Vorspeisen</h3>
+                <div class="item">
+                    <span class="item-name">Bruschetta Classico</span>
+                    <span class="price">8,50 €</span>
+                </div>
+                <div class="item">
+                    <span class="item-name">Carpaccio vom Rind</span>
+                    <span class="price">14,90 €</span>
+                </div>
+            </div>
+
+            <div class="menu-category">
+                <h3>Hauptspeisen</h3>
+                <div class="item">
+                    <span class="item-name">Hausgemachte Lasagne</span>
+                    <span class="price">13,50 €</span>
+                </div>
+                <div class="item">
+                    <span class="item-name">Pizza nach Wahl</span>
+                    <span class="price">ab 10,00 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Besuchen Sie uns</h2>
+        <p>Marktplatz 1, 45657 Recklinghausen</p>
+        <p>Tel: 02361 / 123456</p>
+        <p>Öffnungszeiten: Di - So, 12:00 - 22:00 Uhr</p>
+    </section>
+
+    <div class="footer">
+        &copy; 2026 WestDevSolutions | Entwickelt von Mikael Akyüz
+    </div>
+
+</body>
+</html>
